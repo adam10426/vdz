@@ -30,6 +30,10 @@
         position: relative;
     }
 
+    :root {
+        --flower-border-offset: 40px;
+    }
+
     .container {
         position: relative;
         width: 100%;
@@ -40,13 +44,15 @@
         align-items: center;
         justify-content: center;
         padding: 40px 20px;
+        overflow: visible;
     }
 
     .flower {
         position: absolute;
         width: 100px;
         height: 100px;
-        animation: rotate 20s linear infinite;
+        z-index: 6;
+        pointer-events: none;
     }
 
     .flower img {
@@ -54,28 +60,42 @@
         height: 100%;
         object-fit: contain;
         filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        animation: rotate 20s linear infinite;
     }
 
     .flower-top-left {
-        top: 30px;
-        left: 10px;
+        top: var(--flower-border-offset);
+        left: var(--flower-border-offset);
+        transform: translate(-50%, -50%);
     }
 
     .flower-top-right {
-        top: 30px;
-        right: 10px;
+        top: var(--flower-border-offset);
+        right: var(--flower-border-offset);
+        transform: translate(50%, -50%);
+    }
+
+    .flower-top-right img {
         animation-delay: -5s;
     }
 
     .flower-bottom-left {
-        bottom: 30px;
-        left: 10px;
+        bottom: var(--flower-border-offset);
+        left: var(--flower-border-offset);
+        transform: translate(-50%, 50%);
+    }
+
+    .flower-bottom-left img {
         animation-delay: -10s;
     }
 
     .flower-bottom-right {
-        bottom: 30px;
-        right: 10px;
+        bottom: var(--flower-border-offset);
+        right: var(--flower-border-offset);
+        transform: translate(50%, 50%);
+    }
+
+    .flower-bottom-right img {
         animation-delay: -15s;
     }
 
@@ -117,6 +137,7 @@
         width: 100%;
         max-width: 380px;
         z-index: 5;
+        overflow: visible;
     }
 
     .letter-frame {
@@ -222,8 +243,8 @@
         }
 
         .flower {
-            width: 80px;
-            height: 80px;
+            width: 113px;
+            height: 113px;
         }
 
         .cat {
@@ -237,20 +258,19 @@
 <body>
 
 <div class="container">
-    <div class="flower flower-top-left">
-        <img src="images/flower.png" alt="Frangipani">
-    </div>
-    <div class="flower flower-top-right">
-        <img src="images/flower.png" alt="Frangipani">
-    </div>
-    <div class="flower flower-bottom-left">
-        <img src="images/flower.png" alt="Frangipani">
-    </div>
-    <div class="flower flower-bottom-right">
-        <img src="images/flower.png" alt="Frangipani">
-    </div>
-
     <div class="paper-card">
+        <div class="flower flower-top-left">
+            <img src="images/flower.png" alt="Frangipani">
+        </div>
+        <!-- <div class="flower flower-top-right">
+            <img src="images/flower.png" alt="Frangipani">
+        </div>
+        <div class="flower flower-bottom-left">
+            <img src="images/flower.png" alt="Frangipani">
+        </div> -->
+        <div class="flower flower-bottom-right">
+            <img src="images/flower.png" alt="Frangipani">
+        </div>
         <div class="letter-frame">
             <span class="corner-bottom-left"></span>
             <span class="corner-bottom-right"></span>

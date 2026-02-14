@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purple Valentine</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-family: 'Caveat', cursive;
+        background: linear-gradient(180deg, #b794d6 0%, #9b6fc4 50%, #8855b3 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 420px;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .flower {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        animation: rotate 20s linear infinite;
+    }
+
+    .flower img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    }
+
+    .flower-top-left {
+        top: 30px;
+        left: 10px;
+    }
+
+    .flower-top-right {
+        top: 30px;
+        right: 10px;
+        animation-delay: -5s;
+    }
+
+    .flower-bottom-left {
+        bottom: 30px;
+        left: 10px;
+        animation-delay: -10s;
+    }
+
+    .flower-bottom-right {
+        bottom: 30px;
+        right: 10px;
+        animation-delay: -15s;
+    }
+
+    @keyframes rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .cat {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        z-index: 10;
+    }
+
+    .cat img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    .cat-bottom-left {
+        bottom: 50px;
+        left: 30px;
+    }
+
+    .cat-bottom-right {
+        bottom: 50px;
+        right: 30px;
+    }
+
+    .paper-card {
+        position: relative;
+        background: linear-gradient(180deg, #f5e6d3 0%, #e8d4bb 100%);
+        border-radius: 12px;
+        padding: 50px 30px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 380px;
+        z-index: 5;
+    }
+
+    .letter-frame {
+        border: 3px solid #b8a3d9;
+        border-radius: 8px;
+        padding: 40px 25px;
+        position: relative;
+    }
+
+    .letter-frame::before,
+    .letter-frame::after,
+    .corner-top-left,
+    .corner-top-right,
+    .corner-bottom-left,
+    .corner-bottom-right {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 3px solid #b8a3d9;
+    }
+
+    .letter-frame::before {
+        top: 8px;
+        left: 8px;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .letter-frame::after {
+        top: 8px;
+        right: 8px;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .corner-bottom-left {
+        bottom: 8px;
+        left: 8px;
+        border-right: none;
+        border-top: none;
+    }
+
+    .corner-bottom-right {
+        bottom: 8px;
+        right: 8px;
+        border-left: none;
+        border-top: none;
+    }
+
+    .letter-content {
+        text-align: center;
+        color: #4a3a5a;
+    }
+
+    .letter-title {
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #3d2d4d;
+    }
+
+    .letter-text {
+        font-family: 'Caveat', cursive;
+        font-size: 1.4rem;
+        line-height: 1.8;
+        margin-bottom: 25px;
+        color: #4a3a5a;
+    }
+
+    .heart {
+        font-size: 2.5rem;
+        color: #d88ba8;
+        margin-top: 15px;
+        animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 30px 15px;
+        }
+
+        .paper-card {
+            padding: 40px 20px;
+        }
+
+        .letter-frame {
+            padding: 30px 20px;
+        }
+
+        .letter-title {
+            font-size: 1.9rem;
+        }
+
+        .letter-text {
+            font-size: 1.25rem;
+        }
+
+        .flower {
+            width: 80px;
+            height: 80px;
+        }
+
+        .cat {
+            width: 50px;
+            height: 50px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="flower flower-top-left">
+        <img src="images/flower.png" alt="Frangipani">
+    </div>
+    <div class="flower flower-top-right">
+        <img src="images/flower.png" alt="Frangipani">
+    </div>
+    <div class="flower flower-bottom-left">
+        <img src="images/flower.png" alt="Frangipani">
+    </div>
+    <div class="flower flower-bottom-right">
+        <img src="images/flower.png" alt="Frangipani">
+    </div>
+
+    <div class="paper-card">
+        <div class="letter-frame">
+            <span class="corner-bottom-left"></span>
+            <span class="corner-bottom-right"></span>
+            <div class="letter-content">
+                <h1 class="letter-title">My Beloved,</h1>
+                <p class="letter-text">
+                    Your eyes never held the depth of the mysterious ocean, instead in it I saw a cosmos of emotions.
+                </p>
+                <p class="letter-text">
+                    Your Swan.
+                </p>
+                <div class="heart">
+                    <img src="images/cat.png" alt="Cat" width="100">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

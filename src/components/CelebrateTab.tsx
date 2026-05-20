@@ -12,7 +12,7 @@ export function CelebrateTab({ partnerName, onProceed }: CelebrateTabProps) {
   const [blewOut, setBlewOut] = useState(false);
 
   const handleBlowOut = () => {
-    triggerSoundEffect();
+    // triggerSoundEffect();
     setCandlesLit(false);
     setBlewOut(true);
     setTimeout(() => {
@@ -21,7 +21,7 @@ export function CelebrateTab({ partnerName, onProceed }: CelebrateTabProps) {
   };
 
   const handleRelight = () => {
-    triggerSoundEffect();
+    // triggerSoundEffect();
     setCandlesLit(true);
     setBlewOut(false);
   };
@@ -62,15 +62,14 @@ export function CelebrateTab({ partnerName, onProceed }: CelebrateTabProps) {
           />
 
           {/* Sparkles / Candleglow overlays */}
-          {candlesLit ? (
+          {/* {candlesLit ? (
             <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center">
-              {/* Virtual Candleglow or spark particles */}
               <div className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-4">
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-300 animate-ping opacity-75" />
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-ping opacity-60 delay-300" />
               </div>
             </div>
-          ) : null}
+          ) : null} */}
 
           {/* Sweet "Blew Out" Overlay */}
           {blewOut && (
@@ -112,12 +111,12 @@ export function CelebrateTab({ partnerName, onProceed }: CelebrateTabProps) {
       <div className="w-full z-10 mt-6 mb-4 flex justify-center">
         <button
           onClick={() => {
-            triggerSoundEffect();
+            // triggerSoundEffect();
             onProceed();
           }}
           className="group flex items-center gap-2 px-6 py-3 rounded-full border border-brand-outline/40 hover:border-brand-primary bg-brand-sugar/80 backdrop-blur-sm font-sans text-xs font-semibold uppercase tracking-[0.12em] text-brand-primary transition-all duration-300 hover:scale-[1.02] active:scale-95 cursor-pointer shadow-sm"
         >
-          <span>PROCEED FURTHER</span>
+          <span>Memories</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 duration-300" />
         </button>
       </div>

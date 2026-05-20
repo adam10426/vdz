@@ -26,7 +26,6 @@ export function TimerTab({ partnerName, targetDate, onUnlock, onFastForward }: T
   }, [targetDate]);
 
   const handleUnlockClick = () => {
-    triggerSoundEffect();
     if (time.isCompleted) {
       onUnlock();
     } else {

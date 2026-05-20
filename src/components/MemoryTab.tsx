@@ -17,13 +17,13 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
   const [memories, setMemories] = useState<Memory[]>([
     {
       id: 1,
-      title: 'Gentle Purrs',
+      title: 'Our First Date',
       description: 'Where it all began, with soft paws and warm hearts.',
       image: '/src/assets/images/cuddling_kittens_1779239106154.png',
     },
     {
       id: 2,
-      title: 'First Touch',
+      title: '',
       description: 'Holding hands amidst plumeria blossoms. Soft, warm, and true.',
       image: '/src/assets/images/hands_holding_1779239154534.png',
     },
@@ -41,12 +41,12 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
   const [newDesc, setNewDesc] = useState('');
 
   const handleNextCard = () => {
-    triggerSoundEffect();
+    // triggerSoundEffect();
     setActiveIndex((prev) => (prev + 1) % memories.length);
   };
 
   const handlePrevCard = () => {
-    triggerSoundEffect();
+    // triggerSoundEffect();
     setActiveIndex((prev) => (prev - 1 + memories.length) % memories.length);
   };
 
@@ -54,7 +54,7 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
     e.preventDefault();
     if (!newTitle.trim() || !newDesc.trim()) return;
 
-    triggerSoundEffect();
+    // triggerSoundEffect();
     const newMemory: Memory = {
       id: Date.now(),
       title: newTitle,
@@ -124,7 +124,7 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
             <span
               key={index}
               onClick={() => {
-                triggerSoundEffect();
+                // triggerSoundEffect();
                 setActiveIndex(index);
               }}
               className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
@@ -136,7 +136,7 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
       </div>
 
       {/* Sweet add memory container */}
-      <div className="w-full z-10 px-4 mb-2">
+      {/* <div className="w-full z-10 px-4 mb-2">
         {!showAddForm ? (
           <button
             onClick={() => setShowAddForm(true)}
@@ -185,13 +185,13 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
             </div>
           </form>
         )}
-      </div>
+      </div> */}
 
       {/* Action Button at bottom */}
       <div className="w-full z-10 mt-auto mb-4 flex justify-center">
         <button
           onClick={() => {
-            triggerSoundEffect();
+            // triggerSoundEffect();
             onNext();
           }}
           className="relative inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-tertiary text-white font-sans text-xs font-semibold uppercase tracking-wider shadow-md hover:scale-[1.03] transition-transform duration-300 active:scale-95 cursor-pointer"

@@ -17,9 +17,8 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('timer');
   const [partnerName, setPartnerName] = useState('My Love');
   const [targetDate, setTargetDate] = useState(() => {
-    // Default target date is exactly 1 day and 4 hours from now so the countdown ticks nicely with numbers
-    const tomorrow = new Date(Date.now() + 28 * 60 * 60 * 1000);
-    return tomorrow.toISOString().slice(0, 16); // format: YYYY-MM-DDTHH:mm
+    const targetDate = new Date('2026-05-24T00:00:00Z');
+    return targetDate.toISOString().slice(0, 16); // format: YYYY-MM-DDTHH:mm
   });
 
   const [hasUnlocked, setHasUnlocked] = useState(false);
@@ -100,9 +99,6 @@ export default function App() {
 
           {/* Interactive Heart Button on the right (opens settings!) */}
           <button
-            onClick={() => {
-              setShowSettings(true);
-            }}
             title="Celebration Settings"
             className="text-brand-primary hover:scale-110 active:scale-95 transition-transform p-1 rounded-full cursor-pointer"
           >
@@ -255,7 +251,7 @@ export default function App() {
                 </div>
                 <button
                   onClick={() => {
-                    triggerSoundEffect();
+                    // triggerSoundEffect();
                     setShowSettings(false);
                   }}
                   className="p-1 text-brand-text-muted hover:text-brand-primary hover:bg-brand-primary-light/10 rounded-full transition-colors cursor-pointer"

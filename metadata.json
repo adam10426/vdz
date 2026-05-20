@@ -1,0 +1,6 @@
+{
+  "name": "Our Story",
+  "description": "An elegant, interactive birthday dynamic keepsake and countdown for My Love, complete with beautiful memories, love notes, interactive celebration, and gentle romantic transitions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

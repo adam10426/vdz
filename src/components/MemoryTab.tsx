@@ -18,20 +18,74 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
     {
       id: 1,
       title: 'Our First Date',
-      description: 'Where it all began, with soft paws and warm hearts.',
-      image: '/src/assets/images/cuddling_kittens_1779239106154.png',
+      description: 'Where it all began.',
+      image: `/src/assets/images/${1}.jpg`,
     },
     {
       id: 2,
-      title: '',
-      description: 'Holding hands amidst plumeria blossoms. Soft, warm, and true.',
-      image: '/src/assets/images/hands_holding_1779239154534.png',
+      title: 'Our First Date',
+      description: 'Ended with a beautiful laugh.',
+      image: `/src/assets/images/${2}.jpg`,
     },
     {
       id: 3,
-      title: 'Sweet Sanctuary',
-      description: 'Laughing under golden sun rays, carving out our little piece of eternity.',
-      image: '/src/assets/images/picnic_under_tree_1779239288204.png',
+      title: 'Our Engagement function',
+      description: 'The day I got another family.',
+      image: `/src/assets/images/${3}.jpg`,
+    },
+     {
+      id: 4,
+      title: 'Our second date',
+      description: 'Clicked one of the most beautiful photos of ours, had a great time. Got a scolding from mom for not coming home on time!',
+      image: `/src/assets/images/${4}.jpg`,
+    },
+     {
+      id: 5,
+      title: 'Our Third Date',
+      description: 'Started with some cows, sunflower and shy smile.',
+      image: `/src/assets/images/${5}.jpg`,
+    },
+     {
+      id: 6,
+      title: 'Our Third Date',
+      description: 'Waiting for the food to come, quite hungry!',
+      image: `/src/assets/images/${6}.jpg`,
+    },
+     {
+      id: 7,
+      title: 'Our Third Date',
+      description: 'Happiest girl in the world, with beautiful smile and sunflower to complete the moment.',
+      image: `/src/assets/images/${7}.jpg`,
+    },
+     {
+      id: 8,
+      title: 'First Family Dinner',
+      description: 'First time I listened you singing.',
+      image: `/src/assets/images/${8}.jpg`,
+    },
+     {
+      id: 9,
+      title: 'Our Fourth Date',
+      description: 'Bought some gajras for you, you loved them! Drove you all the way back to my home and then yours. Crazy stuff!!',
+      image: `/src/assets/images/${9}.jpg`,
+    },
+    {
+      id: 10,
+      title: 'Our Fifth Date',
+      description: 'Tried the overhype food, still loved it because it was with you!',
+      image: `/src/assets/images/${10}.jpg`,
+    },
+    {
+      id: 11,
+      title: 'Movie Night',
+      description: 'Our First movie night together, watched a comedy movie! Held your hand and said I love you, for the first time in person.',
+      image: `/src/assets/images/${11}.jpg`,
+    },
+    {
+      id: 12,
+      title: "Movie Night (Famous O's",
+      description: 'Laughed till our stomachs hurt, enjoyed every moment.',
+      image: `/src/assets/images/${12}.jpg`,
     },
   ]);
 
@@ -98,7 +152,7 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
             <img
               src={memories[activeIndex].image}
               alt={memories[activeIndex].title}
-              className="w-full h-[180px] object-cover rounded-[20px] shadow-sm select-none"
+              className="w-full h-[200px] object-cover object-center rounded-[20px] shadow-sm select-none"
               referrerPolicy="no-referrer"
             />
             <h3 className="font-serif text-xl font-medium text-brand-primary tracking-tight mt-5 mb-1">

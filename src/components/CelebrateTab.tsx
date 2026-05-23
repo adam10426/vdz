@@ -53,7 +53,7 @@ export function CelebrateTab({ partnerName, onProceed }: CelebrateTabProps) {
       <div className="relative w-full max-w-[280px] my-6 z-10">
         <div className="relative overflow-hidden rounded-[20px] bg-brand-sugar p-1 outline-1 outline-neutral-200">
           <img
-            src="/src/assets/images/birthday_cake_1779239080298.png"
+            src="/images/birthday_cake_1779239080298.png"
             alt="Beautiful Birthday Cake"
             className={`w-full h-[280px] object-cover rounded-[19px] transition-all duration-700 ${
               !candlesLit ? 'brightness-75 contrast-105' : 'brightness-100'

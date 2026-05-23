@@ -83,7 +83,7 @@ export function MemoryTab({ onNext }: MemoryTabProps) {
     },
     {
       id: 12,
-      title: "Movie Night (Famous O's",
+      title: "Movie Night (Famous O's)",
       description: 'Laughed till our stomachs hurt, enjoyed every moment.',
       image: `/src/assets/images/${12}.jpg`,
     },

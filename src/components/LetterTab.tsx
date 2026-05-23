@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { triggerSoundEffect } from '../utils';
-import { Mail, Edit3, Heart } from 'lucide-react';
+import { Moon, PawPrint } from 'lucide-react';
 
 interface LetterTabProps {
   partnerName: string;
@@ -9,10 +9,12 @@ interface LetterTabProps {
 export function LetterTab({ partnerName }: LetterTabProps) {
   const [isEditable, setIsEditable] = useState(false);
   const [letterBody, setLetterBody] = useState([
-    `There are moments in life that feel like they've been plucked from a dream, and every second I've spent by your side is one of them. Looking back at our journey, from the smallest whispers to the grandest celebrations, my heart finds its home in your smile.`,
-    `You have a way of turning the ordinary into something truly cinematic. The way the light catches your eyes, the quiet strength in your hands, and the kindness that flows from you like a soft spring breeze—it all makes me realize how lucky I am to share this life with you.`,
-    `As you celebrate another year of life, my only wish is that you feel even a fraction of the joy you bring into the world every single day. You are my favorite story, my most cherished memory, and my brightest future.`,
-    `May your day be as beautiful, as elegant, and as radiant as you are.`,
+    "This letter is for you, my beloved " + partnerName + ". Its being quite a while I haven't written you a letter, So I thought why not write you one on this precious moment of your life. I wish you a happiest 23rd birthday!",
+    "May this day bring joy and happiness to your life! May the most peaceful and beautiful chapter of your life begin with this day.",
+    "I hope that I will be one of the reasons your life becomes beautiful again, I hope I will be one of the reasons you'll start smiling again. I hope you'll find sukoon in me.",
+    "I am simple person, don't really know how to wish someone a birthday or celebrate it. This is a small gesture from me. I hope this wish and letter bring you joy and you'll feel loved.",
+    "Lastly I am sorry, for all the troubles that you have gone through in your life, because of me. I am sorry if this not how expected to be wished, but I hope you'll like it.",
+    "I'll love you until my last breath. My beloved swan."
   ]);
 
   const handleTextChange = (index: number, newText: string) => {
@@ -29,7 +31,7 @@ export function LetterTab({ partnerName }: LetterTabProps) {
   return (
     <div className="flex flex-col items-center flex-1 py-4 px-6 relative w-full overflow-hidden select-none fade-in">
       {/* Settings Toggle to customise message */}
-      <div className="absolute top-2 right-4 z-20">
+      {/* <div className="absolute top-2 right-4 z-20">
         <button
           onClick={handleToggleEdit}
           className="text-[10px] tracking-[0.05em] text-brand-outline hover:text-brand-primary flex items-center gap-1.5 py-1.5 px-3 bg-brand-sugar/80 rounded-full border border-brand-outline-light/20 shadow-sm cursor-pointer hover:scale-[1.02]"
@@ -37,10 +39,10 @@ export function LetterTab({ partnerName }: LetterTabProps) {
           <Edit3 className="w-3 h-3" />
           <span>{isEditable ? 'Save Message' : 'Personalize Letter'}</span>
         </button>
-      </div>
+      </div> */}
 
       {/* Love Letter Frame */}
-      <div className="w-full max-w-sm mt-8 mb-4 bg-brand-sugar border border-brand-outline-light/15 rounded-[32px] p-6 shadow-ambient relative z-10 text-center flex flex-col justify-between min-h-[500px]">
+      <div className="w-full max-w-sm mt-8 mb-4 bg-brand-sugar border border-brand-outline-light/15 rounded-[32px] p-6 shadow-ambient relative z-10 text-center flex flex-col justify-between min-h-[655px]">
         {/* Sparkle icon at top right */}
         <div className="absolute top-4 right-4 text-brand-primary-light animate-pulse-slow">
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -60,8 +62,9 @@ export function LetterTab({ partnerName }: LetterTabProps) {
         <div className="flex-1 flex flex-col justify-between">
           <div>
             {/* Header */}
-            <h3 className="font-serif text-2xl font-semibold text-brand-primary tracking-tight mb-6">
-              To {partnerName === 'My Love' ? 'My Dearest' : partnerName},
+            <h3 className="font-serif text-2xl font-semibold text-brand-primary tracking-tight mb-6 flex items-center gap-2 text-center">
+              <span>To My Beloved {partnerName}</span>
+              <Moon className="w-5 h-5 fill-brand-primary" />
             </h3>
 
             {/* Paragraphs */}
@@ -84,20 +87,20 @@ export function LetterTab({ partnerName }: LetterTabProps) {
           </div>
 
           {/* Signature matching the screenshot */}
-          <div className="mt-8 border-t border-brand-outline-light/10 pt-6 flex flex-col items-center">
+          <div className="mt-2 border-t border-brand-outline-light/10 pt-6 flex flex-col items-center">
             <span className="text-[9px] uppercase tracking-[0.2em] text-brand-text-muted/60 font-sans font-bold">
-              FOREVER & ALWAYS,
+              Be Happy and Keep Smiling!,
             </span>
             <div className="flex items-center gap-2 mt-2">
               {/* RK decorative leaves */}
-              <div className="flex items-center gap-1 opacity-70 text-brand-outline">
+              {/* <div className="flex items-center gap-1 opacity-70 text-brand-outline">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21V9m0 0a3 3 0 013-3V3m-3 6a3 3 0 00-3-3V3" />
                 </svg>
                 <span className="text-xs font-sans tracking-wide font-semibold text-brand-primary">RK</span>
-              </div>
+              </div> */}
               <span className="font-serif text-lg italic text-brand-primary font-medium tracking-wide">
-                With Love
+                Your Swan!
               </span>
             </div>
           </div>
@@ -105,18 +108,18 @@ export function LetterTab({ partnerName }: LetterTabProps) {
       </div>
 
       {/* Bird Footer design representing "A lifetime of moments together" */}
-      <div className="flex flex-col items-center mt-3 mb-6 opacity-85">
-        <div className="w-10 h-10 text-brand-outline/80">
+      {/* <div className="flex flex-col items-center mt-3 mb-6 opacity-85"> */}
+        {/* <div className="w-10 h-10 text-brand-outline/80"> */}
           {/* Detailed Little elegant bird silhouette */}
-          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="4" className="w-full h-full">
+          {/* <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="4" className="w-full h-full">
             <path d="M30 40 C30 40, 40 30, 55 30 C70 30, 80 40, 80 55 C80 65, 75 70, 70 70 M30 40 C20 40, 15 50, 15 60 C15 70, 25 70, 30 70 M30 70 L25 85 M35 70 L35 85 M55 70 L55 85" strokeLinecap="round" />
             <circle cx="65" cy="42" r="4" fill="currentColor" />
-          </svg>
-        </div>
-        <span className="text-[10px] font-sans text-brand-text-muted/65 tracking-[0.1em] mt-1">
+          </svg> */}
+        {/* </div> */}
+        {/* <span className="text-[10px] font-sans text-brand-text-muted/65 tracking-[0.1em] mt-1">
           A lifetime of moments together
-        </span>
-      </div>
+        </span> */}
+      {/* </div> */}
     </div>
   );
 }
